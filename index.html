@@ -1,0 +1,1163 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TPT Evaluación y Proyectos S.C. | Ciencias Sociales y Políticas Públicas</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0fdf4',
+                            100: '#e0f2fe',
+                            500: '#0284c7',
+                            600: '#0369a1',
+                            700: '#0c4a6e',
+                            800: '#0f172a',
+                            gold: '#d97706',
+                            emerald: '#059669',
+                            indigo: '#4f46e5'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-hero {
+            background: linear-gradient(135deg, #0b1329 0%, #111d38 50%, #034b75 100%);
+        }
+        .glass-panel {
+            background: rgba(15, 23, 42, 0.75);
+            backdrop-filter: blur(16px);
+        }
+        .text-gradient {
+            background: linear-gradient(135deg, #38bdf8 0%, #34d399 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .greek-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .greek-card:hover {
+            transform: translateY(-6px);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-sky-500 selection:text-white">
+
+    <!-- Top Information Bar -->
+    <div class="bg-slate-950 text-slate-300 text-xs py-2 px-4 border-b border-slate-800 hidden sm:block">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-6">
+                <span class="flex items-center gap-2"><i class="fa-solid fa-location-dot text-sky-400"></i> Guadalajara, Jalisco, México</span>
+                <span class="flex items-center gap-2"><i class="fa-solid fa-users text-emerald-400"></i> Red de +20 Investigadores Nacionales</span>
+                <span class="flex items-center gap-2"><i class="fa-solid fa-certificate text-amber-400"></i> Fundada en 2019</span>
+            </div>
+            <div class="flex items-center space-x-4">
+                <span class="text-slate-400">Investigación Aplicada en Ciencias Sociales y Políticas Públicas</span>
+                <span class="bg-sky-900/60 text-sky-300 px-2 py-0.5 rounded text-[10px] border border-sky-700">Actualizado 2026</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation Header -->
+    <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <div class="w-12 h-12 bg-gradient-to-br from-slate-900 via-sky-900 to-sky-700 text-white rounded-xl flex items-center justify-center font-black text-xl shadow-md shadow-sky-900/20 group-hover:scale-105 transition-transform border border-sky-500/20">
+                        TPT
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="text-xl font-extrabold text-slate-900 tracking-tight leading-none">TPT <span class="text-sky-600">Evaluación</span></span>
+                        <span class="text-[11px] font-semibold text-slate-500 uppercase tracking-widest mt-0.5">& Proyectos S.C.</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden lg:flex items-center space-x-7 font-medium text-xs uppercase tracking-wider text-slate-700">
+                    <a href="#inicio" class="hover:text-sky-600 transition py-1">Inicio</a>
+                    <a href="#filosofia" class="hover:text-sky-600 transition py-1">Significado TPT</a>
+                    <a href="#sectores" class="hover:text-sky-600 transition py-1">Sectores</a>
+                    <a href="#capacidades" class="hover:text-sky-600 transition py-1">Metodologías</a>
+                    <a href="#proyectos" class="hover:text-sky-600 transition py-1">Proyectos</a>
+                    <a href="#diagnostico" class="hover:text-sky-600 transition py-1">Diagnóstico TPT</a>
+                    <a href="#contacto" class="hover:text-sky-600 transition py-1">Contacto</a>
+                </nav>
+
+                <!-- Header CTA -->
+                <div class="hidden sm:flex items-center gap-3">
+                    <a href="#contacto" class="bg-sky-700 hover:bg-sky-800 text-white px-5 py-2.5 rounded-lg text-xs font-bold shadow-md hover:shadow-lg transition flex items-center gap-2">
+                        <span>Consulta Institucional</span>
+                        <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="lg:hidden flex items-center">
+                    <button id="mobile-menu-btn" type="button" class="text-slate-800 p-2 focus:outline-none" aria-label="Abrir Menú">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-slate-200 px-6 pt-3 pb-6 space-y-3 shadow-lg">
+            <a href="#inicio" class="block py-2 text-slate-700 font-medium hover:text-sky-600 border-b border-slate-100">Inicio</a>
+            <a href="#filosofia" class="block py-2 text-slate-700 font-medium hover:text-sky-600 border-b border-slate-100">Significado TPT (Taxi • Praxis • Telos)</a>
+            <a href="#sectores" class="block py-2 text-slate-700 font-medium hover:text-sky-600 border-b border-slate-100">Sectores de Experiencia</a>
+            <a href="#capacidades" class="block py-2 text-slate-700 font-medium hover:text-sky-600 border-b border-slate-100">Metodologías y Productos</a>
+            <a href="#proyectos" class="block py-2 text-slate-700 font-medium hover:text-sky-600 border-b border-slate-100">Proyectos y Contrapartes</a>
+            <a href="#diagnostico" class="block py-2 text-slate-700 font-medium hover:text-sky-600 border-b border-slate-100">Evaluador de Proyectos</a>
+            <a href="#contacto" class="block py-2 text-slate-700 font-medium hover:text-sky-600">Contacto Directo</a>
+            <a href="#contacto" class="block w-full text-center bg-sky-700 text-white py-3 rounded-xl font-bold mt-4 shadow">Solicitar Asesoría Técnica</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="relative gradient-hero text-white py-20 lg:py-28 overflow-hidden">
+        <div class="absolute inset-0 opacity-15 bg-[radial-gradient(#38bdf8_1px,transparent_1px)] [background-size:24px_24px]"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Hero Column Left -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 bg-sky-500/10 border border-sky-400/30 px-3.5 py-1.5 rounded-full text-sky-200 text-xs font-semibold tracking-wide">
+                        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                        Guadalajara, Jalisco • Consultoría Científica y Social
+                    </div>
+
+                    <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-tight">
+                        Generación de <span class="text-gradient">Valor Público</span> mediante investigación y evaluación rigurosa
+                    </h1>
+
+                    <p class="text-slate-300 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                        En <strong class="text-white font-semibold">TPT Evaluación y Proyectos S.C.</strong> integramos la ciencia social, la evidencia cuantitativa y cualitativa, y el análisis de políticas públicas para transformar instituciones gubernamentales, multilaterales y del tercer sector.
+                    </p>
+
+                    <!-- CTA Actions -->
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-2">
+                        <a href="#proyectos" class="bg-sky-600 hover:bg-sky-500 text-white px-7 py-3.5 rounded-xl font-bold shadow-lg shadow-sky-600/30 hover:scale-[1.02] transition flex items-center justify-center gap-2 text-sm">
+                            <span>Explorar Proyectos 2020-2026</span>
+                            <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </a>
+                        <a href="#filosofia" class="bg-slate-800/90 hover:bg-slate-800 text-slate-200 border border-slate-700 px-7 py-3.5 rounded-xl font-semibold hover:border-slate-500 transition flex items-center justify-center gap-2 text-sm">
+                            <i class="fa-solid fa-book-open text-sky-400"></i>
+                            <span>Concepto TPT</span>
+                        </a>
+                    </div>
+
+                    <!-- Highlight Badges -->
+                    <div class="pt-8 border-t border-slate-800/80 grid grid-cols-2 sm:grid-cols-3 gap-4 text-xs text-slate-400 text-left">
+                        <div class="flex items-center gap-2.5">
+                            <i class="fa-solid fa-handshake text-emerald-400 text-base"></i>
+                            <span>Convenios Binacionales MX-EEUU</span>
+                        </div>
+                        <div class="flex items-center gap-2.5">
+                            <i class="fa-solid fa-microscope text-sky-400 text-base"></i>
+                            <span>Evaluación Cualitativa PROFEST / CONEVAL</span>
+                        </div>
+                        <div class="flex items-center gap-2.5 col-span-2 sm:col-span-1">
+                            <i class="fa-solid fa-building-columns text-amber-400 text-base"></i>
+                            <span>Guias de Evaluabilidad Jalisco</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Card Right (Key Impact Summary) -->
+                <div class="lg:col-span-5">
+                    <div class="glass-panel border border-slate-700/80 rounded-3xl p-6 sm:p-8 shadow-2xl relative">
+                        <div class="flex items-center justify-between pb-6 border-b border-slate-800 mb-6">
+                            <div>
+                                <span class="text-[10px] font-bold uppercase tracking-widest text-sky-400">Perfil Institucional TPT</span>
+                                <h3 class="text-xl font-bold text-white mt-1">Evidencia & Impacto</h3>
+                            </div>
+                            <span class="bg-emerald-500/20 text-emerald-300 text-xs font-bold px-3 py-1 rounded-full border border-emerald-500/30">
+                                S.C. Activa
+                            </span>
+                        </div>
+
+                        <!-- Core Strengths List -->
+                        <div class="space-y-4 text-xs">
+                            <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800/80 flex items-start gap-3.5">
+                                <div class="w-9 h-9 rounded-lg bg-sky-500/20 text-sky-400 flex items-center justify-center shrink-0 font-bold">
+                                    <i class="fa-solid fa-wheat-awn"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-white text-sm">Trabajo Agrícola & Jornamex</h4>
+                                    <p class="text-slate-400 mt-0.5">Encuestas especializadas, mapas de formalidad e incidencia con Wilson Center y Walmart Foundation.</p>
+                                </div>
+                            </div>
+
+                            <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800/80 flex items-start gap-3.5">
+                                <div class="w-9 h-9 rounded-lg bg-amber-500/20 text-amber-400 flex items-center justify-center shrink-0 font-bold">
+                                    <i class="fa-solid fa-masks-theater"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-white text-sm">Gestión Cultural & PROFEST</h4>
+                                    <p class="text-slate-400 mt-0.5">Primera evaluación cualitativa de impacto para CONEVAL/CISS en el sector de festivales culturales.</p>
+                                </div>
+                            </div>
+
+                            <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-800/80 flex items-start gap-3.5">
+                                <div class="w-9 h-9 rounded-lg bg-indigo-500/20 text-indigo-400 flex items-center justify-center shrink-0 font-bold">
+                                    <i class="fa-solid fa-scale-balanced"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-white text-sm">Gestión Pública & Evaluabilidad</h4>
+                                    <p class="text-slate-400 mt-0.5">Metodologías de evaluabilidad ex-ante para el Plan Estatal de Gobernanza y Reglas de Operación UDG.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-6 pt-5 border-t border-slate-800 flex items-center justify-between text-xs text-slate-400">
+                            <span>Sede: Guadalajara, Jal.</span>
+                            <a href="#contacto" class="text-sky-400 hover:text-sky-300 font-semibold flex items-center gap-1">
+                                <span>Agendar sesión</span>
+                                <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Institutional Highlights Strip -->
+    <section class="py-10 bg-white border-b border-slate-200 shadow-inner">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <div class="p-3 border-r border-slate-100 last:border-none">
+                    <div class="text-2xl sm:text-3xl font-black text-slate-900">2019</div>
+                    <div class="text-xs font-semibold text-slate-500 uppercase tracking-wider mt-1">Año de Fundación</div>
+                </div>
+                <div class="p-3 border-r border-slate-100 last:border-none">
+                    <div class="text-2xl sm:text-3xl font-black text-sky-600">+20</div>
+                    <div class="text-xs font-semibold text-slate-500 uppercase tracking-wider mt-1">Investigadores Nacionales</div>
+                </div>
+                <div class="p-3 border-r border-slate-100 last:border-none">
+                    <div class="text-2xl sm:text-3xl font-black text-slate-900">11+</div>
+                    <div class="text-xs font-semibold text-slate-500 uppercase tracking-wider mt-1">Proyectos Clave 2020-2026</div>
+                </div>
+                <div class="p-3">
+                    <div class="text-2xl sm:text-3xl font-black text-emerald-600">Binacional</div>
+                    <div class="text-xs font-semibold text-slate-500 uppercase tracking-wider mt-1">Alcance México - EEUU</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Etymology & Philosophy Section: Taxi, Praxis, Telos -->
+    <section id="filosofia" class="py-20 bg-slate-900 text-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <span class="bg-sky-500/20 text-sky-300 border border-sky-500/30 text-xs font-bold px-3.5 py-1 rounded-full uppercase tracking-widest">
+                    El Significado Detrás de TPT
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">Taxi • Praxis • Telos</h2>
+                <p class="text-slate-300 text-sm leading-relaxed">
+                    Las iniciales de <strong class="text-white">TPT</strong> provienen de tres conceptos fundamentales de la filosofía griega clásica que guían nuestra labor en el entendimiento de la sociedad y la acción pública.
+                </p>
+            </div>
+
+            <!-- 3 Greek Pillars Grid -->
+            <div class="grid md:grid-cols-3 gap-8">
+                
+                <!-- TAXI Card -->
+                <div class="greek-card bg-slate-800/80 border border-sky-500/30 rounded-3xl p-8 flex flex-col justify-between relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-sky-500/10 rounded-full blur-2xl group-hover:bg-sky-500/20 transition"></div>
+                    <div>
+                        <div class="w-14 h-14 bg-sky-600/30 text-sky-400 rounded-2xl flex items-center justify-center font-black text-2xl mb-6 border border-sky-500/30">
+                            T
+                        </div>
+                        <span class="text-xs font-mono font-bold text-sky-400 uppercase tracking-widest">Concepto I</span>
+                        <h3 class="text-2xl font-black text-white mt-1 mb-3">TAXIS <span class="text-xs font-normal text-slate-400">(Τάξις)</span></h3>
+                        <p class="text-slate-300 text-xs leading-relaxed mb-6">
+                            Representa <strong class="text-white">medir, tasar, valorar</strong> y denota el esfuerzo metódico que conduce a la precisión. Es el rigor cuantitativo y cualitativo en la recolección de datos, encuestas especializadas y diagnósticos documentales.
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-slate-700/80 text-[11px] text-sky-300 font-semibold flex items-center gap-2">
+                        <i class="fa-solid fa-chart-line"></i>
+                        <span>Precisión, Tasación & Medición</span>
+                    </div>
+                </div>
+
+                <!-- PRAXIS Card -->
+                <div class="greek-card bg-slate-800/80 border border-emerald-500/30 rounded-3xl p-8 flex flex-col justify-between relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-emerald-500/10 rounded-full blur-2xl group-hover:bg-emerald-500/20 transition"></div>
+                    <div>
+                        <div class="w-14 h-14 bg-emerald-600/30 text-emerald-400 rounded-2xl flex items-center justify-center font-black text-2xl mb-6 border border-emerald-500/30">
+                            P
+                        </div>
+                        <span class="text-xs font-mono font-bold text-emerald-400 uppercase tracking-widest">Concepto II</span>
+                        <h3 class="text-2xl font-black text-white mt-1 mb-3">PRAXIS <span class="text-xs font-normal text-slate-400">(Πρᾶξις)</span></h3>
+                        <p class="text-slate-300 text-xs leading-relaxed mb-6">
+                            La <strong class="text-white">acción reflexiva de la teoría</strong> y la implementación de programas. Un proceso iterativo de ejecución y aprendizaje donde se aplican conocimientos, se cultivan aprendizajes prácticos y se perfecciona el oficio gubernamental y social.
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-slate-700/80 text-[11px] text-emerald-300 font-semibold flex items-center gap-2">
+                        <i class="fa-solid fa-sliders"></i>
+                        <span>Implementación & Aprendizaje Iterativo</span>
+                    </div>
+                </div>
+
+                <!-- TELOS Card -->
+                <div class="greek-card bg-slate-800/80 border border-amber-500/30 rounded-3xl p-8 flex flex-col justify-between relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-amber-500/10 rounded-full blur-2xl group-hover:bg-amber-500/20 transition"></div>
+                    <div>
+                        <div class="w-14 h-14 bg-amber-600/30 text-amber-400 rounded-2xl flex items-center justify-center font-black text-2xl mb-6 border border-amber-500/30">
+                            T
+                        </div>
+                        <span class="text-xs font-mono font-bold text-amber-400 uppercase tracking-widest">Concepto III</span>
+                        <h3 class="text-2xl font-black text-white mt-1 mb-3">TELOS <span class="text-xs font-normal text-slate-400">(Τέλος)</span></h3>
+                        <p class="text-slate-300 text-xs leading-relaxed mb-6">
+                            La <strong class="text-white">causa final, el origen y la razón de ser</strong> de los fenómenos sociales. Entender el "telos" nos coloca en una posición superior para modificar situaciones adversas y maximizar la creación de valor público.
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-slate-700/80 text-[11px] text-amber-300 font-semibold flex items-center gap-2">
+                        <i class="fa-solid fa-bullseye"></i>
+                        <span>Propósito Final & Valor Público</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Team & Structure Overview -->
+            <div class="mt-16 bg-slate-950 p-8 rounded-3xl border border-slate-800 grid lg:grid-cols-12 gap-8 items-center">
+                <div class="lg:col-span-8 space-y-3">
+                    <h4 class="text-lg font-bold text-white flex items-center gap-2">
+                        <i class="fa-solid fa-users-gear text-sky-400"></i>
+                        Estructura Operativa y Red de Investigación
+                    </h4>
+                    <p class="text-slate-400 text-xs leading-relaxed">
+                        Fundada en <strong class="text-slate-200">Guadalajara, Jalisco</strong> en 2019, TPT opera con un núcleo de consultores y científicos expertos permanentes y coordina una red flexible de hasta <strong class="text-slate-200">20 investigadores de alto nivel</strong> distribuidos en diversos estados de la República Mexicana según las exigencias territoriales de cada proyecto.
+                    </p>
+                </div>
+                <div class="lg:col-span-4 flex justify-end">
+                    <a href="#contacto" class="w-full sm:w-auto bg-sky-600 hover:bg-sky-500 text-white text-center font-bold px-6 py-3 rounded-xl text-xs transition">
+                        Conocer al Equipo Técnico
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Sectors of Expertise Section -->
+    <section id="sectores" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <span class="bg-sky-100 text-sky-800 text-xs font-bold px-3.5 py-1 rounded-md uppercase tracking-wider">
+                    Sectores de Intervención
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">Áreas Temáticas Prioritarias</h2>
+                <p class="text-slate-600 text-sm">
+                    Investigación aplicada y consultoría estratégica en sectores neurálgicos para el desarrollo social y económico de México.
+                </p>
+            </div>
+
+            <!-- Sectors Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <!-- Sector 1: Trabajo Agrícola -->
+                <div class="bg-white rounded-2xl p-6 border border-slate-200 hover:border-sky-500 hover:shadow-xl transition group flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 bg-emerald-100 text-emerald-700 rounded-xl flex items-center justify-center text-xl mb-5 group-hover:bg-emerald-600 group-hover:text-white transition">
+                            <i class="fa-solid fa-wheat-awn"></i>
+                        </div>
+                        <h3 class="font-bold text-slate-900 text-base mb-2 group-hover:text-sky-700 transition">Jornaleros y Trabajo Agrícola</h3>
+                        <p class="text-slate-600 text-xs leading-relaxed mb-4">
+                            Encuestas especializadas sobre calidad del empleo, mapeo de tasas de formalidad en municipios agroexportadores y facilitación de mesas de diálogo binacionales México-EEUU.
+                        </p>
+                    </div>
+                    <div class="pt-3 border-t border-slate-100 text-[11px] font-semibold text-emerald-700">
+                        • Proyectos Jornamex / Wilson Center
+                    </div>
+                </div>
+
+                <!-- Sector 2: Gestión Pública -->
+                <div class="bg-white rounded-2xl p-6 border border-slate-200 hover:border-sky-500 hover:shadow-xl transition group flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 bg-sky-100 text-sky-700 rounded-xl flex items-center justify-center text-xl mb-5 group-hover:bg-sky-600 group-hover:text-white transition">
+                            <i class="fa-solid fa-landmark"></i>
+                        </div>
+                        <h3 class="font-bold text-slate-900 text-base mb-2 group-hover:text-sky-700 transition">Gestión Pública y Políticas</h3>
+                        <p class="text-slate-600 text-xs leading-relaxed mb-4">
+                            Análisis de evaluabilidad de planes estratégicos, evaluación de programas estatales y federales, y diseño de Reglas de Operación institucionales.
+                        </p>
+                    </div>
+                    <div class="pt-3 border-t border-slate-100 text-[11px] font-semibold text-sky-700">
+                        • Gobierno de Jalisco / CONEVAL
+                    </div>
+                </div>
+
+                <!-- Sector 3: Gestión Cultural -->
+                <div class="bg-white rounded-2xl p-6 border border-slate-200 hover:border-sky-500 hover:shadow-xl transition group flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 bg-amber-100 text-amber-700 rounded-xl flex items-center justify-center text-xl mb-5 group-hover:bg-amber-600 group-hover:text-white transition">
+                            <i class="fa-solid fa-palette"></i>
+                        </div>
+                        <h3 class="font-bold text-slate-900 text-base mb-2 group-hover:text-sky-700 transition">Gestión Cultural & Arte</h3>
+                        <p class="text-slate-600 text-xs leading-relaxed mb-4">
+                            Evaluaciones de impacto de fondos culturales como PROFEST, reestructuración de centros universitarios de promoción cultural y sistematización de intervenciones musicales.
+                        </p>
+                    </div>
+                    <div class="pt-3 border-t border-slate-100 text-[11px] font-semibold text-amber-700">
+                        • PROFEST / ITESO / UDG
+                    </div>
+                </div>
+
+                <!-- Sector 4: Educación y Desarrollo -->
+                <div class="bg-white rounded-2xl p-6 border border-slate-200 hover:border-sky-500 hover:shadow-xl transition group flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 bg-indigo-100 text-indigo-700 rounded-xl flex items-center justify-center text-xl mb-5 group-hover:bg-indigo-600 group-hover:text-white transition">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+                        <h3 class="font-bold text-slate-900 text-base mb-2 group-hover:text-sky-700 transition">Educación y Desarrollo Social</h3>
+                        <p class="text-slate-600 text-xs leading-relaxed mb-4">
+                            Capacidades de monitoreo y evaluación para sistemas de educación media superior, diagnósticos estadísticos regionales y desarrollo comunitario.
+                        </p>
+                    </div>
+                    <div class="pt-3 border-t border-slate-100 text-[11px] font-semibold text-indigo-700">
+                        • SEMS UDG / COECYTJAL
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Capabilities & Products Matrix -->
+    <section id="capacidades" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-5 space-y-6">
+                    <span class="bg-emerald-100 text-emerald-800 text-xs font-bold px-3.5 py-1 rounded-md uppercase tracking-wider">
+                        Productos y Procesos Técnicos
+                    </span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight leading-tight">
+                        Capacidad Multidisciplinaria para Retos Complejos
+                    </h2>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Desarrollamos instrumentos metodológicos a la medida, combinando herramientas cuantitativas avanzadas con metodologías participativas y cualitativas de campo.
+                    </p>
+
+                    <div class="bg-slate-50 border border-slate-200 rounded-2xl p-5 space-y-3">
+                        <h4 class="font-bold text-slate-900 text-xs uppercase tracking-wider">Sello Metodológico TPT:</h4>
+                        <div class="grid grid-cols-2 gap-2 text-xs text-slate-700">
+                            <span class="flex items-center gap-1.5"><i class="fa-solid fa-check text-emerald-600"></i> Rigor Académico</span>
+                            <span class="flex items-center gap-1.5"><i class="fa-solid fa-check text-emerald-600"></i> Inteligencia Colectiva</span>
+                            <span class="flex items-center gap-1.5"><i class="fa-solid fa-check text-emerald-600"></i> Enfoque Derechos</span>
+                            <span class="flex items-center gap-1.5"><i class="fa-solid fa-check text-emerald-600"></i> Incidencia Real</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7">
+                    <div class="grid sm:grid-cols-2 gap-4">
+                        
+                        <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200 hover:bg-sky-50/50 transition">
+                            <div class="w-10 h-10 rounded-lg bg-sky-100 text-sky-700 flex items-center justify-center text-lg mb-3 font-bold">
+                                <i class="fa-solid fa-chart-pie"></i>
+                            </div>
+                            <h4 class="font-bold text-slate-900 text-sm mb-1">Estudios Cuantitativos y Encuestas</h4>
+                            <p class="text-slate-600 text-xs leading-relaxed">Diseño y levantamiento de encuestas representativas, modelación de datos y mapas de tasas de formalidad.</p>
+                        </div>
+
+                        <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200 hover:bg-sky-50/50 transition">
+                            <div class="w-10 h-10 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center text-lg mb-3 font-bold">
+                                <i class="fa-solid fa-comments"></i>
+                            </div>
+                            <h4 class="font-bold text-slate-900 text-sm mb-1">Cualitativos & Trabajo de Campo</h4>
+                            <p class="text-slate-600 text-xs leading-relaxed">Entrevistas a profundidad, etnografía, coordinación de investigación de campo en múltiples entidades.</p>
+                        </div>
+
+                        <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200 hover:bg-sky-50/50 transition">
+                            <div class="w-10 h-10 rounded-lg bg-amber-100 text-amber-700 flex items-center justify-center text-lg mb-3 font-bold">
+                                <i class="fa-solid fa-people-group"></i>
+                            </div>
+                            <h4 class="font-bold text-slate-900 text-sm mb-1">Talleres e Inteligencia Colectiva</h4>
+                            <p class="text-slate-600 text-xs leading-relaxed">Facilitación de grupos focales, mesas de concertación internacional y diseño participativo.</p>
+                        </div>
+
+                        <div class="bg-slate-50 p-5 rounded-2xl border border-slate-200 hover:bg-sky-50/50 transition">
+                            <div class="w-10 h-10 rounded-lg bg-indigo-100 text-indigo-700 flex items-center justify-center text-lg mb-3 font-bold">
+                                <i class="fa-solid fa-file-signature"></i>
+                            </div>
+                            <h4 class="font-bold text-slate-900 text-sm mb-1">Normativa & Reglas de Operación</h4>
+                            <p class="text-slate-600 text-xs leading-relaxed">Elaboración de manuales, guías de evaluabilidad ex-ante e instrumentos regulatorios para el sector público.</p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Projects Portfolio & Counterparts Section (Curriculum 2020 - 2026) -->
+    <section id="proyectos" class="py-20 bg-slate-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+                <div>
+                    <span class="bg-sky-500/20 text-sky-300 border border-sky-500/30 text-xs font-bold px-3 py-1 rounded-md uppercase tracking-wider">
+                        Trayectoria Demostrada
+                    </span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight mt-2">Proyectos Recientes y Contrapartes</h2>
+                </div>
+
+                <!-- Project Category Filters -->
+                <div class="flex flex-wrap gap-2 text-xs font-semibold">
+                    <button onclick="filterProjects('all')" class="project-btn active bg-sky-600 text-white px-4 py-2 rounded-lg transition">Todos</button>
+                    <button onclick="filterProjects('trabajo')" class="project-btn bg-slate-800 text-slate-300 hover:bg-slate-700 px-4 py-2 rounded-lg transition">Trabajo Agrícola</button>
+                    <button onclick="filterProjects('gobierno')" class="project-btn bg-slate-800 text-slate-300 hover:bg-slate-700 px-4 py-2 rounded-lg transition">Gestión Pública</button>
+                    <button onclick="filterProjects('cultura')" class="project-btn bg-slate-800 text-slate-300 hover:bg-slate-700 px-4 py-2 rounded-lg transition">Cultura & Educación</button>
+                </div>
+            </div>
+
+            <!-- Projects Grid (Authentic Data from Curriculum) -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- Project Item 1 -->
+                <div class="project-card trabajo bg-slate-800/90 rounded-2xl p-6 border border-slate-700/80 hover:border-sky-500 transition flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between text-xs text-sky-400 font-mono mb-3">
+                            <span>2026</span>
+                            <span class="bg-sky-950 px-2 py-0.5 rounded text-sky-300 border border-sky-800">Trabajo Agrícola</span>
+                        </div>
+                        <h3 class="font-bold text-white text-base mb-2">Trabajo agrícola digno: grupo de trabajo</h3>
+                        <p class="text-slate-400 text-xs leading-relaxed mb-4">Coordinación e impulso de acuerdos para el avance continuo en la formalización del trabajo agrícola.</p>
+                    </div>
+                    <div class="pt-4 border-t border-slate-700/80 flex items-center justify-between text-xs">
+                        <span class="text-slate-300 font-semibold"><i class="fa-solid fa-building text-slate-500 mr-1.5"></i> Avina Americas</span>
+                        <button onclick="openModal('p1')" class="text-sky-400 hover:text-sky-300 font-semibold">Ver detalle &rarr;</button>
+                    </div>
+                </div>
+
+                <!-- Project Item 2 -->
+                <div class="project-card cultura gobierno bg-slate-800/90 rounded-2xl p-6 border border-slate-700/80 hover:border-sky-500 transition flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between text-xs text-emerald-400 font-mono mb-3">
+                            <span>2026</span>
+                            <span class="bg-emerald-950 px-2 py-0.5 rounded text-emerald-300 border border-emerald-800">Educación</span>
+                        </div>
+                        <h3 class="font-bold text-white text-base mb-2">Desarrollo de Capacidades de Evaluación Programa Presente</h3>
+                        <p class="text-slate-400 text-xs leading-relaxed mb-4">Asesoría técnica para el diseño de monitoreo y evaluación de la permanencia escolar.</p>
+                    </div>
+                    <div class="pt-4 border-t border-slate-700/80 flex items-center justify-between text-xs">
+                        <span class="text-slate-300 font-semibold"><i class="fa-solid fa-building text-slate-500 mr-1.5"></i> SEMS UDG</span>
+                        <button onclick="openModal('p2')" class="text-sky-400 hover:text-sky-300 font-semibold">Ver detalle &rarr;</button>
+                    </div>
+                </div>
+
+                <!-- Project Item 3 -->
+                <div class="project-card gobierno bg-slate-800/90 rounded-2xl p-6 border border-slate-700/80 hover:border-sky-500 transition flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between text-xs text-amber-400 font-mono mb-3">
+                            <span>2025</span>
+                            <span class="bg-amber-950 px-2 py-0.5 rounded text-amber-300 border border-amber-800">Diagnóstico Regional</span>
+                        </div>
+                        <h3 class="font-bold text-white text-base mb-2">Diagnóstico Estadístico y Documental Autlán y Sur de Jalisco</h3>
+                        <p class="text-slate-400 text-xs leading-relaxed mb-4">Análisis documental y cuantitativo regional para la toma de decisiones tecnológicas.</p>
+                    </div>
+                    <div class="pt-4 border-t border-slate-700/80 flex items-center justify-between text-xs">
+                        <span class="text-slate-300 font-semibold"><i class="fa-solid fa-building text-slate-500 mr-1.5"></i> COECYTJAL</span>
+                        <button onclick="openModal('p3')" class="text-sky-400 hover:text-sky-300 font-semibold">Ver detalle &rarr;</button>
+                    </div>
+                </div>
+
+                <!-- Project Item 4 -->
+                <div class="project-card cultura bg-slate-800/90 rounded-2xl p-6 border border-slate-700/80 hover:border-sky-500 transition flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between text-xs text-indigo-400 font-mono mb-3">
+                            <span>2025</span>
+                            <span class="bg-indigo-950 px-2 py-0.5 rounded text-indigo-300 border border-indigo-800">Gestión Cultural</span>
+                        </div>
+                        <h3 class="font-bold text-white text-base mb-2">Reglas de Operación Fondo Extensión Universitaria</h3>
+                        <p class="text-slate-400 text-xs leading-relaxed mb-4">Elaboración de normativa y diseño del fondo de extensión y difusión cultural.</p>
+                    </div>
+                    <div class="pt-4 border-t border-slate-700/80 flex items-center justify-between text-xs">
+                        <span class="text-slate-300 font-semibold"><i class="fa-solid fa-building text-slate-500 mr-1.5"></i> Universidad de Guadalajara</span>
+                        <button onclick="openModal('p4')" class="text-sky-400 hover:text-sky-300 font-semibold">Ver detalle &rarr;</button>
+                    </div>
+                </div>
+
+                <!-- Project Item 5 -->
+                <div class="project-card trabajo bg-slate-800/90 rounded-2xl p-6 border border-slate-700/80 hover:border-sky-500 transition flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between text-xs text-sky-400 font-mono mb-3">
+                            <span>2023 - 2025</span>
+                            <span class="bg-sky-950 px-2 py-0.5 rounded text-sky-300 border border-sky-800">Binacional / Agricultura</span>
+                        </div>
+                        <h3 class="font-bold text-white text-base mb-2">Agriculture in North America – From Knowledge to Action</h3>
+                        <p class="text-slate-400 text-xs leading-relaxed mb-4">Investigación aplicada para la formalización del empleo agrícola en cadenas de exportación.</p>
+                    </div>
+                    <div class="pt-4 border-t border-slate-700/80 flex items-center justify-between text-xs">
+                        <span class="text-slate-300 font-semibold"><i class="fa-solid fa-building text-slate-500 mr-1.5"></i> Wilson Center / Walmart Foundation</span>
+                        <button onclick="openModal('p5')" class="text-sky-400 hover:text-sky-300 font-semibold">Ver detalle &rarr;</button>
+                    </div>
+                </div>
+
+                <!-- Project Item 6 -->
+                <div class="project-card cultura gobierno bg-slate-800/90 rounded-2xl p-6 border border-slate-700/80 hover:border-sky-500 transition flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between text-xs text-amber-400 font-mono mb-3">
+                            <span>2024</span>
+                            <span class="bg-amber-950 px-2 py-0.5 rounded text-amber-300 border border-amber-800">Evaluación de Impacto</span>
+                        </div>
+                        <h3 class="font-bold text-white text-base mb-2">Evaluación Cualitativa de Impacto Programa PROFEST</h3>
+                        <p class="text-slate-400 text-xs leading-relaxed mb-4">Primera evaluación cualitativa de impacto en México para el principal programa federal de festivales culturales.</p>
+                    </div>
+                    <div class="pt-4 border-t border-slate-700/80 flex items-center justify-between text-xs">
+                        <span class="text-slate-300 font-semibold"><i class="fa-solid fa-building text-slate-500 mr-1.5"></i> CONEVAL / CISS</span>
+                        <button onclick="openModal('p6')" class="text-sky-400 hover:text-sky-300 font-semibold">Ver detalle &rarr;</button>
+                    </div>
+                </div>
+
+                <!-- Project Item 7 -->
+                <div class="project-card gobierno bg-slate-800/90 rounded-2xl p-6 border border-slate-700/80 hover:border-sky-500 transition flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between text-xs text-emerald-400 font-mono mb-3">
+                            <span>2024</span>
+                            <span class="bg-emerald-950 px-2 py-0.5 rounded text-emerald-300 border border-emerald-800">Evaluabilidad</span>
+                        </div>
+                        <h3 class="font-bold text-white text-base mb-2">Guía de Análisis de Evaluabilidad Ex-Ante Planes de Jalisco</h3>
+                        <p class="text-slate-400 text-xs leading-relaxed mb-4">Herramienta técnica para servidores públicos del Poder Ejecutivo de Jalisco en el Plan Estatal de Gobernanza.</p>
+                    </div>
+                    <div class="pt-4 border-t border-slate-700/80 flex items-center justify-between text-xs">
+                        <span class="text-slate-300 font-semibold"><i class="fa-solid fa-building text-slate-500 mr-1.5"></i> Gobierno del Estado de Jalisco</span>
+                        <button onclick="openModal('p7')" class="text-sky-400 hover:text-sky-300 font-semibold">Ver detalle &rarr;</button>
+                    </div>
+                </div>
+
+                <!-- Project Item 8 -->
+                <div class="project-card trabajo bg-slate-800/90 rounded-2xl p-6 border border-slate-700/80 hover:border-sky-500 transition flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between text-xs text-sky-400 font-mono mb-3">
+                            <span>2020 - 2023</span>
+                            <span class="bg-sky-950 px-2 py-0.5 rounded text-sky-300 border border-sky-800">Encuestas & Mapas</span>
+                        </div>
+                        <h3 class="font-bold text-white text-base mb-2">Jornaleros en la Agricultura de Exportación (Jornamex)</h3>
+                        <p class="text-slate-400 text-xs leading-relaxed mb-4">Producción de encuestas especializadas y mapeo de tasas de formalidad laboral agrícola.</p>
+                    </div>
+                    <div class="pt-4 border-t border-slate-700/80 flex items-center justify-between text-xs">
+                        <span class="text-slate-300 font-semibold"><i class="fa-solid fa-building text-slate-500 mr-1.5"></i> Wilson Center / Walmart Foundation</span>
+                        <button onclick="openModal('p8')" class="text-sky-400 hover:text-sky-300 font-semibold">Ver detalle &rarr;</button>
+                    </div>
+                </div>
+
+                <!-- Project Item 9 -->
+                <div class="project-card cultura bg-slate-800/90 rounded-2xl p-6 border border-slate-700/80 hover:border-sky-500 transition flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between text-xs text-indigo-400 font-mono mb-3">
+                            <span>2024 - 2025</span>
+                            <span class="bg-indigo-950 px-2 py-0.5 rounded text-indigo-300 border border-indigo-800">Reestructuración</span>
+                        </div>
+                        <h3 class="font-bold text-white text-base mb-2">Evaluación y Talleres Centro Promoción Cultural ITESO</h3>
+                        <p class="text-slate-400 text-xs leading-relaxed mb-4">Diseño participativo, talleres de inteligencia colectiva y evaluación de estructura organizacional.</p>
+                    </div>
+                    <div class="pt-4 border-t border-slate-700/80 flex items-center justify-between text-xs">
+                        <span class="text-slate-300 font-semibold"><i class="fa-solid fa-building text-slate-500 mr-1.5"></i> ITESO Universidad Jesuita</span>
+                        <button onclick="openModal('p9')" class="text-sky-400 hover:text-sky-300 font-semibold">Ver detalle &rarr;</button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Interactive Diagnostic / Evaluator Tool for Institutional Clients -->
+    <section id="diagnostico" class="py-20 gradient-hero text-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            
+            <div class="text-center max-w-3xl mx-auto mb-12 space-y-3">
+                <span class="bg-sky-500/20 text-sky-300 border border-sky-500/30 text-xs font-bold px-3.5 py-1 rounded-full uppercase tracking-widest">
+                    Herramienta Institucional
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">Evaluador & Diseñador Metodológico TPT</h2>
+                <p class="text-slate-300 text-sm leading-relaxed">
+                    Identifique la ruta técnica y los productos metodológicos idóneos para su programa social, política pública o iniciativa institucional.
+                </p>
+            </div>
+
+            <!-- Evaluator Widget Box -->
+            <div class="max-w-4xl mx-auto bg-slate-950/90 border border-slate-700 rounded-3xl p-6 sm:p-10 shadow-2xl backdrop-blur">
+                <form id="tpt-evaluator-form" onsubmit="event.preventDefault(); processEvaluator();" class="space-y-6">
+                    
+                    <div class="grid sm:grid-cols-2 gap-6">
+                        <!-- Sector Selection -->
+                        <div>
+                            <label class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">1. Sector Institucional</label>
+                            <select id="eval-sector" class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 text-white text-xs focus:outline-none focus:border-sky-500 transition">
+                                <option value="trabajo">Trabajo, Empleo y Jornaleros Agrícolas</option>
+                                <option value="cultura">Gestión Cultural, Artes y Festivales</option>
+                                <option value="gobierno">Administración Pública Estatal o Federal</option>
+                                <option value="educacion">Educación y Extensión Universitaria</option>
+                                <option value="social">Desarrollo Social y Organizaciones No Lucrativas</option>
+                            </select>
+                        </div>
+
+                        <!-- Objective Selection -->
+                        <div>
+                            <label class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">2. Objetivo Principal</label>
+                            <select id="eval-objective" class="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 text-white text-xs focus:outline-none focus:border-sky-500 transition">
+                                <option value="impacto">Medición de Impacto (Cualitativo o Cuantitativo)</option>
+                                <option value="evaluabilidad">Análisis de Evaluabilidad Ex-Ante de Planes</option>
+                                <option value="encuesta">Diseño y Aplicación de Encuestas Especializadas</option>
+                                <option value="reglas">Diseño de Reglas de Operación / Normativa</option>
+                                <option value="talleres">Facilitación de Inteligencia Colectiva y Talleres</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Additional Context Checkboxes -->
+                    <div>
+                        <label class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">3. Requerimientos de Trabajo de Campo</label>
+                        <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 text-xs">
+                            <label class="flex items-center gap-2 bg-slate-800/60 p-3 rounded-xl border border-slate-700/80 cursor-pointer hover:bg-slate-800">
+                                <input type="checkbox" id="req-nacional" checked class="rounded text-sky-500 focus:ring-0">
+                                <span>Investigadores en Varios Estados</span>
+                            </label>
+                            <label class="flex items-center gap-2 bg-slate-800/60 p-3 rounded-xl border border-slate-700/80 cursor-pointer hover:bg-slate-800">
+                                <input type="checkbox" id="req-binacional" class="rounded text-sky-500 focus:ring-0">
+                                <span>Coordinación Binacional (MX-EEUU)</span>
+                            </label>
+                            <label class="flex items-center gap-2 bg-slate-800/60 p-3 rounded-xl border border-slate-700/80 cursor-pointer hover:bg-slate-800">
+                                <input type="checkbox" id="req-grupos" checked class="rounded text-sky-500 focus:ring-0">
+                                <span>Grupos Focales / Talleres</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="text-center pt-2">
+                        <button type="submit" class="bg-sky-600 hover:bg-sky-500 text-white font-bold px-8 py-3.5 rounded-xl shadow-lg shadow-sky-600/30 transition hover:scale-[1.02] text-xs uppercase tracking-wider">
+                            <i class="fa-solid fa-diagram-project mr-2"></i> Generar Propuesta Metodológica
+                        </button>
+                    </div>
+                </form>
+
+                <!-- Output Display Container -->
+                <div id="eval-result" class="hidden mt-8 pt-8 border-t border-slate-800">
+                    <div class="bg-slate-900 p-6 rounded-2xl border border-sky-500/40 space-y-4">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-800 pb-4">
+                            <div>
+                                <span class="text-[10px] text-sky-400 font-mono uppercase">Ruta Técnica Sugerida TPT</span>
+                                <h4 id="eval-res-title" class="text-lg font-bold text-white">Evaluación de Impacto y Diagnóstico</h4>
+                            </div>
+                            <span id="eval-res-badge" class="bg-emerald-500/20 text-emerald-300 font-bold text-xs px-3 py-1 rounded-full border border-emerald-500/30">
+                                Cobertura Multidisciplinaria
+                            </span>
+                        </div>
+
+                        <div class="space-y-3 text-xs text-slate-300">
+                            <h5 class="font-bold text-white flex items-center gap-2"><i class="fa-solid fa-list-check text-sky-400"></i> Entregables sugeridos TPT:</h5>
+                            <ul id="eval-res-deliverables" class="list-disc list-inside space-y-1.5 text-slate-400">
+                                <!-- Dynamic -->
+                            </ul>
+                        </div>
+
+                        <div class="pt-4 flex justify-end">
+                            <a href="#contacto" onclick="prefillContact('Diagnóstico generado en evaluador')" class="bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-5 py-2.5 rounded-xl text-xs transition flex items-center gap-2">
+                                <span>Solicitar Alcance Formal</span>
+                                <i class="fa-solid fa-envelope"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="py-20 bg-slate-950 text-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12">
+                
+                <!-- Contact Info Left -->
+                <div class="lg:col-span-5 space-y-8">
+                    <div>
+                        <span class="bg-sky-500/20 text-sky-300 border border-sky-500/30 text-xs font-bold px-3 py-1 rounded-md uppercase tracking-wider">Contacto Institucional</span>
+                        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-white mt-3">Inicie una Colaboración con TPT</h2>
+                        <p class="text-slate-400 text-xs sm:text-sm mt-3 leading-relaxed">
+                            Estamos basados en Guadalajara, Jalisco, operando con alcance nacional y alianzas internacionales.
+                        </p>
+                    </div>
+
+                    <div class="space-y-5 text-xs">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-sky-500/20 text-sky-400 flex items-center justify-center shrink-0 border border-sky-500/30 text-base">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-sm">Sede Central</h4>
+                                <p class="text-slate-400 mt-0.5">Guadalajara, Jalisco, México.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0 border border-emerald-500/30 text-base">
+                                <i class="fa-solid fa-globe"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-sm">Red Nacional de Campo</h4>
+                                <p class="text-slate-400 mt-0.5">Hasta 20 investigadores en campo según las necesidades territoriales del proyecto.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center shrink-0 border border-amber-500/30 text-base">
+                                <i class="fa-solid fa-handshake"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-sm">Financiamiento & Alianzas</h4>
+                                <p class="text-slate-400 mt-0.5">Wilson Center, Walmart Foundation, Avina Americas, CONEVAL, UDG, ITESO, COECYTJAL.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Jalisco & Mexico Map Representation -->
+                    <div class="bg-slate-900 border border-slate-800 rounded-2xl p-5 relative overflow-hidden">
+                        <div class="flex items-center justify-between text-xs mb-3">
+                            <span class="font-bold text-slate-200"><i class="fa-solid fa-map-pin text-sky-400 mr-1.5"></i> Cobertura de Investigación</span>
+                            <span class="text-slate-500 font-mono">Guadalajara / MX</span>
+                        </div>
+                        <div class="h-28 bg-slate-950 rounded-xl flex items-center justify-center text-slate-500 text-xs border border-slate-800 relative">
+                            <div class="absolute inset-0 opacity-20 bg-[radial-gradient(#38bdf8_1px,transparent_1px)] [background-size:12px_12px]"></div>
+                            <span class="relative z-10 text-center px-4 font-medium text-slate-300">
+                                <i class="fa-solid fa-earth-americas text-sky-400 text-lg mb-1 block"></i>
+                                Capacidad de despliegue en las 32 entidades federativas
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form Right -->
+                <div class="lg:col-span-7 bg-slate-900/80 border border-slate-800 p-8 rounded-3xl backdrop-blur">
+                    <form id="contact-form" onsubmit="handleContactSubmit(event)" class="space-y-5">
+                        <div class="grid sm:grid-cols-2 gap-5">
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-300 mb-1.5">Nombre Completo *</label>
+                                <input type="text" required placeholder="Ej. Dra. María Hernández" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-xs text-white focus:outline-none focus:border-sky-500 transition">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-300 mb-1.5">Institución / Organización *</label>
+                                <input type="text" required placeholder="Ej. Universidad / Secretaría / ONG" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-xs text-white focus:outline-none focus:border-sky-500 transition">
+                            </div>
+                        </div>
+
+                        <div class="grid sm:grid-cols-2 gap-5">
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-300 mb-1.5">Correo Electrónico *</label>
+                                <input type="email" required placeholder="contacto@institucion.org" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-xs text-white focus:outline-none focus:border-sky-500 transition">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-300 mb-1.5">Sector de Interés</label>
+                                <select id="contact-sector" class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-xs text-white focus:outline-none focus:border-sky-500 transition">
+                                    <option value="trabajo">Trabajo Agrícola & Formalidad</option>
+                                    <option value="gobierno">Gestión Pública & Evaluabilidad</option>
+                                    <option value="cultura">Gestión Cultural & PROFEST</option>
+                                    <option value="educacion">Educación & Extensión Universitaria</option>
+                                    <option value="otro">Otro Requerimiento Técnico</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-300 mb-1.5">Descripción de la Solicitud o Proyecto *</label>
+                            <textarea id="contact-message" rows="4" required placeholder="Describa el programa, ámbito geográfico y objetivos de evaluación o investigación..." class="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 text-xs text-white focus:outline-none focus:border-sky-500 transition"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full bg-sky-600 hover:bg-sky-500 text-white font-bold py-3.5 rounded-xl shadow-lg shadow-sky-600/30 transition text-xs uppercase tracking-wider flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-paper-plane"></i>
+                            <span>Enviar Mensaje a TPT</span>
+                        </button>
+
+                        <p class="text-[10px] text-slate-500 text-center">Toda la información institucional compartida se trata con rigurosa confidencialidad profesional.</p>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-slate-950 text-slate-400 text-xs py-12 border-t border-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-8 mb-10">
+                
+                <div class="col-span-2 space-y-3">
+                    <div class="flex items-center gap-2.5">
+                        <div class="w-8 h-8 bg-sky-700 text-white rounded-lg flex items-center justify-center font-black text-sm">
+                            TPT
+                        </div>
+                        <span class="text-base font-black text-white tracking-tight">TPT Evaluación y Proyectos S.C.</span>
+                    </div>
+                    <p class="text-slate-400 text-xs leading-relaxed max-w-sm">
+                        Empresa creada por consultores y científicos expertos en evaluación, ciencias sociales y políticas públicas. Guadalajara, Jalisco, México.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-white text-xs uppercase tracking-wider mb-3">Filosofía</h4>
+                    <ul class="space-y-2 text-slate-400">
+                        <li><a href="#filosofia" class="hover:text-white transition">TAXIS (Medición)</a></li>
+                        <li><a href="#filosofia" class="hover:text-white transition">PRAXIS (Acción)</a></li>
+                        <li><a href="#filosofia" class="hover:text-white transition">TELOS (Propósito)</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-white text-xs uppercase tracking-wider mb-3">Sectores</h4>
+                    <ul class="space-y-2 text-slate-400">
+                        <li><a href="#sectores" class="hover:text-white transition">Trabajo Agrícola</a></li>
+                        <li><a href="#sectores" class="hover:text-white transition">Gestión Pública</a></li>
+                        <li><a href="#sectores" class="hover:text-white transition">Gestión Cultural</a></li>
+                        <li><a href="#sectores" class="hover:text-white transition">Educación Superior</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-white text-xs uppercase tracking-wider mb-3">Sede</h4>
+                    <p class="text-slate-400 leading-relaxed">
+                        Guadalajara, Jalisco.<br>
+                        Red de investigadores en todo México.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="pt-8 border-t border-slate-900 flex flex-col sm:flex-row items-center justify-between gap-4 text-slate-500 text-[11px]">
+                <p>&copy; 2026 TPT Evaluación y Proyectos S.C. Todos los derechos reservados.</p>
+                <p>Curriculum Actualizado: Octubre de 2026</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Project Detail Modal -->
+    <div id="project-modal" class="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-sm hidden items-center justify-center p-4">
+        <div class="bg-slate-900 text-white rounded-3xl max-w-2xl w-full p-6 sm:p-8 relative border border-slate-700 shadow-2xl space-y-5 max-h-[90vh] overflow-y-auto">
+            <button onclick="closeModal()" class="absolute top-6 right-6 text-slate-400 hover:text-white text-xl p-1" aria-label="Cerrar">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div id="modal-body">
+                <!-- Dynamic Content -->
+            </div>
+
+            <div class="pt-4 border-t border-slate-800 flex justify-end gap-3">
+                <button onclick="closeModal()" class="bg-slate-800 hover:bg-slate-700 text-slate-300 font-semibold px-5 py-2 rounded-xl text-xs transition">
+                    Cerrar
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Form Confirmation Modal -->
+    <div id="confirm-modal" class="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-sm hidden items-center justify-center p-4">
+        <div class="bg-white text-slate-900 rounded-3xl max-w-md w-full p-8 text-center space-y-4 shadow-2xl">
+            <div class="w-14 h-14 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center text-2xl mx-auto">
+                <i class="fa-solid fa-check"></i>
+            </div>
+            <h3 class="text-xl font-black text-slate-900">Mensaje Recibido</h3>
+            <p class="text-xs text-slate-600 leading-relaxed">
+                Gracias por comunicarse con **TPT Evaluación y Proyectos S.C.** Un consultor senior de nuestra sede en Guadalajara revisará sus requerimientos y se pondrá en contacto.
+            </p>
+            <button onclick="closeConfirmModal()" class="w-full bg-sky-700 hover:bg-sky-800 text-white font-bold py-3 rounded-xl text-xs transition">
+                Entendido
+            </button>
+        </div>
+    </div>
+
+    <script>
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        function filterProjects(cat) {
+            const cards = document.querySelectorAll('.project-card');
+            const btns = document.querySelectorAll('.project-btn');
+
+            btns.forEach(b => {
+                b.classList.remove('bg-sky-600', 'text-white', 'active');
+                b.classList.add('bg-slate-800', 'text-slate-300');
+            });
+
+            event.target.classList.remove('bg-slate-800', 'text-slate-300');
+            event.target.classList.add('bg-sky-600', 'text-white', 'active');
+
+            cards.forEach(card => {
+                if (cat === 'all' || card.classList.contains(cat)) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        const projectData = {
+            'p1': {
+                title: 'Trabajo agrícola digno: grupo de trabajo',
+                year: '2026',
+                counterpart: 'Avina Americas',
+                area: 'Jornaleros y Trabajo Agrícola',
+                desc: 'Iniciativa enfocada en coordinar grupos de trabajo multiactor con productores, importadores y autoridades para consolidar estándares de trabajo digno en la agricultura de exportación.'
+            },
+            'p2': {
+                title: 'Asesoría técnica para el desarrollo de capacidades de evaluación y monitoreo para el programa Presente',
+                year: '2026',
+                counterpart: 'SEMS UDG (Sistema de Educación Media Superior - Universidad de Guadalajara)',
+                area: 'Educación y Desarrollo Social',
+                desc: 'Diseño e implementación de sistemas de monitoreo continuo para prevenir el abandono escolar y fortalecer la permanencia en la educación media superior.'
+            },
+            'p3': {
+                title: 'Diagnóstico estadístico y documental Autlán y municipios del Sur de Jalisco',
+                year: '2025',
+                counterpart: 'Consejo Estatal de Ciencia y Tecnología del Estado de Jalisco (COECYTJAL)',
+                area: 'Diagnósticos Regionales y Gestión Pública',
+                desc: 'Análisis de indicadores estadísticos y revisión documental detallada para identificar vocaciones productivas y necesidades tecnológicas en el Sur de Jalisco.'
+            },
+            'p4': {
+                title: 'Asesoría para la elaboración de las reglas de operación del Fondo de Extensión Universitaria',
+                year: '2025',
+                counterpart: 'Coordinación General de Extensión y Difusión Cultural, UDG',
+                area: 'Gestión Cultural y Normativa',
+                desc: 'Estructuración jurídica y procedimental de las reglas de operación para garantizar la transparencia y pertinencia en la asignación de recursos culturales.'
+            },
+            'p5': {
+                title: 'Agriculture in North America – From Knowledge to Action',
+                year: '2023 - 2025',
+                counterpart: 'Wilson Center / Walmart Foundation',
+                area: 'Trabajo Agrícola / Convenio Binacional',
+                desc: 'Liderazgo de grupo de trabajo binacional con participación de asociaciones de productores en México, importadores estadounidenses y funcionarios federales y estatales para impulsar la formalidad laboral.'
+            },
+            'p6': {
+                title: 'Evaluación de Impacto del Programa Apoyos a Festivales Culturales y Artísticos (PROFEST)',
+                year: '2024',
+                counterpart: 'CONEVAL / Conferencia Interamericana de Seguridad Social (CISS)',
+                area: 'Gestión Cultural & Evaluación de Impacto',
+                desc: 'Primera evaluación de impacto cualitativa en México de un programa federal cultural en el país, analizando los efectos de PROFEST en ONGs, municipios y universidades públicas.'
+            },
+            'p7': {
+                title: 'Guía de análisis de evaluabilidad ex ante de planes e instrumentos derivados del Plan Estatal de Gobernanza y Desarrollo',
+                year: '2024',
+                counterpart: 'Gobierno del Estado de Jalisco',
+                area: 'Gestión Pública y Políticas Públicas',
+                desc: 'Desarrollo de una metodología práctica para que los trabajadores del Poder Ejecutivo de Jalisco evalúen la consistencia y evaluabilidad de sus planes estratégicos antes de su implementación.'
+            },
+            'p8': {
+                title: 'Jornaleros en la agricultura de exportación (Jornamex)',
+                year: '2020 - 2023',
+                counterpart: 'Wilson Center / Walmart Foundation',
+                area: 'Encuestas Especializadas y Mapeo Laboral',
+                desc: 'Producción y difusión de una encuesta especializada sobre calidad del empleo y creación de mapas interactivos de tasas de formalidad en los principales municipios agroexportadores de México.'
+            },
+            'p9': {
+                title: 'Evaluación y talleres para la reestructura del Centro de Promoción Cultural del ITESO',
+                year: '2024 - 2025',
+                counterpart: 'ITESO (Universidad Jesuita de Guadalajara)',
+                area: 'Gestión Cultural y Desarrollo Organizacional',
+                desc: 'Evaluación de estructura organizacional y facilitación de talleres participativos e inteligencia colectiva para optimizar los servicios de promoción cultural universitaria.'
+            }
+        };
+
+        function openModal(id) {
+            const data = projectData[id];
+            if (!data) return;
+
+            const modalBody = document.getElementById('modal-body');
+            modalBody.innerHTML = `
+                <div class="space-y-3">
+                    <span class="text-xs font-mono bg-sky-900/60 text-sky-300 px-2.5 py-1 rounded border border-sky-700">${data.area} • ${data.year}</span>
+                    <h3 class="text-xl font-bold text-white mt-2">${data.title}</h3>
+                    <p class="text-xs font-semibold text-emerald-400"><i class="fa-solid fa-building mr-1"></i> Contraparte / Financiamiento: ${data.counterpart}</p>
+                    <div class="pt-3 border-t border-slate-800">
+                        <h4 class="text-xs font-bold text-slate-300 uppercase mb-1">Descripción y Alcance TPT:</h4>
+                        <p class="text-xs text-slate-400 leading-relaxed">${data.desc}</p>
+                    </div>
+                </div>
+            `;
+
+            const modal = document.getElementById('project-modal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('project-modal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+
+        function processEvaluator() {
+            const sector = document.getElementById('eval-sector').value;
+            const obj = document.getElementById('eval-objective').value;
+
+            const resBox = document.getElementById('eval-result');
+            const title = document.getElementById('eval-res-title');
+            const list = document.getElementById('eval-res-deliverables');
+
+            let deliverables = [];
+
+            if (obj === 'impacto') {
+                deliverables = [
+                    "Diseño metodológico cualitativo / cuantitativo ajustado a lineamientos de evaluación de impacto público.",
+                    "Coordinación de trabajo de campo con red de investigadores estatales.",
+                    "Informe final de hallazgos, matriz de recomendaciones e indicadores de sostenibilidad de impacto."
+                ];
+            } else if (obj === 'evaluabilidad') {
+                deliverables = [
+                    "Guía de evaluabilidad ex-ante de planes e instrumentos institucionales.",
+                    "Taller de análisis de consistencia lógica de la matriz de indicadores.",
+                    "Dictamen de viabilidad y recomendaciones de ajuste estratégico."
+                ];
+            } else if (obj === 'encuesta') {
+                deliverables = [
+                    "Diseño de cuestionarios especializados e instrumentos de captura.",
+                    "Levantamiento de encuestas en municipios o sectores meta.",
+                    "Generación de base de datos analítica y mapas de indicadores clave."
+                ];
+            } else {
+                deliverables = [
+                    "Elaboración del cuerpo normativo y Reglas de Operación institucionales.",
+                    "Sesiones de inteligencia colectiva con actores clave.",
+                    "Manuales de procedimiento y criterios de elegibilidad."
+                ];
+            }
+
+            title.innerText = `Propuesta Técnica TPT para Sector: ${sector.toUpperCase()}`;
+            list.innerHTML = deliverables.map(d => `<li>${d}</li>`).join('');
+
+            resBox.classList.remove('hidden');
+        }
+
+        function prefillContact(msg) {
+            document.getElementById('contact-message').value = `Solicitud de asesoría formal para: ${msg}`;
+        }
