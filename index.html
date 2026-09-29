@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TPT Evaluación y Proyectos S.C. | Investigación Social con Sentido Humano</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts Inter & Outfit -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        warm: {
+                            50: '#fffbeb',
+                            100: '#fef3c7',
+                            200: '#fde68a',
+                            500: '#f59e0b',
+                            600: '#d97706',
+                            700: '#b45309',
+                        },
+                        sand: {
+                            50: '#fafaf9',
+                            100: '#f5f5f4',
+                            200: '#e7e5e4',
+                            800: '#292524',
+                            900: '#1c1917',
+                        },
+                        earth: {
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            800: '#0f172a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fcfbf9;
+            color: #292524;
+        }
+        h1, h2, h3, h4, .font-display {
+            font-family: 'Outfit', sans-serif;
+        }
+        .hero-warm-bg {
+            background: radial-gradient(circle at 80% 20%, rgba(254, 243, 199, 0.6) 0%, rgba(240, 253, 250, 0.5) 40%, #fcfbf9 100%);
+        }
+        .warm-card {
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .warm-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 16px 32px -8px rgba(180, 83, 9, 0.08);
+        }
+        .text-gradient-warm {
+            background: linear-gradient(135deg, #0284c7 0%, #0d9488 50%, #d97706 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .soft-shadow {
+            box-shadow: 0 10px 30px -5px rgba(28, 25, 23, 0.04);
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-amber-200 selection:text-amber-900">
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-stone-900 text-stone-300 text-xs py-2.5 px-4 border-b border-stone-800">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+            <div class="flex items-center gap-4 text-stone-300">
+                <span class="flex items-center gap-1.5"><i class="fa-solid fa-heart text-rose-400"></i> Investigación social cercana y rigurosa</span>
+                <span class="hidden md:inline">•</span>
+                <span class="hidden md:flex items-center gap-1.5"><i class="fa-solid fa-location-dot text-amber-400"></i> Guadalajara, Jalisco, México</span>
+            </div>
+            <div class="flex items-center gap-3">
+                <span class="text-stone-400">Ciencias Sociales & Políticas Públicas</span>
+                <span class="bg-amber-500/20 text-amber-300 px-2.5 py-0.5 rounded-full text-[10px] font-medium border border-amber-500/30">
+                    Actualizado 2026
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-stone-200/80 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                
+                <!-- Logo -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <div class="w-11 h-11 bg-amber-500 text-stone-900 rounded-2xl flex items-center justify-center font-black text-xl shadow-md shadow-amber-500/20 group-hover:scale-105 transition-transform font-display">
+                        TPT
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="text-xl font-bold text-stone-900 tracking-tight font-display leading-tight">TPT <span class="text-amber-600">Evaluación</span></span>
+                        <span class="text-[11px] font-medium text-stone-500 tracking-wider uppercase">& Proyectos S.C.</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden lg:flex items-center space-x-8 text-xs uppercase tracking-wider font-semibold text-stone-600">
+                    <a href="#inicio" class="hover:text-amber-600 transition py-1">Inicio</a>
+                    <a href="#filosofia" class="hover:text-amber-600 transition py-1">Nuestra Esencia</a>
+                    <a href="#sectores" class="hover:text-amber-600 transition py-1">Áreas de Trabajo</a>
+                    <a href="#capacidades" class="hover:text-amber-600 transition py-1">Metodología</a>
+                    <a href="#contrapartes" class="hover:text-amber-600 transition py-1">Comunidad y Aliados</a>
+                </nav>
+
+                <!-- Header CTA Button for Jornamex -->
+                <div class="hidden sm:flex items-center">
+                    <a href="https://jornamex.com/" target="_blank" rel="noopener noreferrer" class="bg-emerald-700 hover:bg-emerald-800 text-white px-4 py-2.5 rounded-xl text-xs font-bold shadow-sm hover:shadow transition flex items-center gap-2">
+                        <i class="fa-solid fa-wheat-awn text-emerald-200"></i>
+                        <span>Proyecto Jornamex</span>
+                        <i class="fa-solid fa-arrow-up-right-from-square text-[10px] opacity-70"></i>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="lg:hidden flex items-center">
+                    <button id="mobile-menu-btn" type="button" class="text-stone-800 p-2 focus:outline-none" aria-label="Abrir Menú">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Dropdown Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-stone-200 px-6 pt-3 pb-6 space-y-3 shadow-lg">
+            <a href="#inicio" class="block py-2 text-stone-700 font-medium hover:text-amber-600 border-b border-stone-100">Inicio</a>
+            <a href="#filosofia" class="block py-2 text-stone-700 font-medium hover:text-amber-600 border-b border-stone-100">Nuestra Esencia (Taxi • Praxis • Telos)</a>
+            <a href="#sectores" class="block py-2 text-stone-700 font-medium hover:text-amber-600 border-b border-stone-100">Áreas de Trabajo</a>
+            <a href="#capacidades" class="block py-2 text-stone-700 font-medium hover:text-amber-600 border-b border-stone-100">Metodología Cercana</a>
+            <a href="#contrapartes" class="block py-2 text-stone-700 font-medium hover:text-amber-600 border-b border-stone-100">Comunidad e Instituciones Aliadas</a>
+            <a href="https://jornamex.com/" target="_blank" rel="noopener noreferrer" class="block w-full text-center bg-emerald-700 text-white py-3 rounded-xl font-bold mt-4 shadow">
+                <i class="fa-solid fa-wheat-awn mr-1.5"></i> Visitar Proyecto Jornamex
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero-warm-bg py-16 lg:py-24 relative overflow-hidden border-b border-stone-200/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Hero Content Left -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    
+                    <div class="inline-flex items-center gap-2 bg-amber-100/80 border border-amber-300/60 px-4 py-1.5 rounded-full text-amber-900 text-xs font-semibold">
+                        <span>👋</span>
+                        <span>Ciencia social con vocación humana y evidencia rigurosa</span>
+                    </div>
+
+                    <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-stone-900 leading-[1.15]">
+                        Generamos <span class="text-gradient-warm">valor público</span> para transformar la vida de las personas
+                    </h1>
+
+                    <p class="text-stone-600 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto lg:mx-0 font-normal">
+                        En <strong class="text-stone-800 font-semibold">TPT Evaluación y Proyectos S.C.</strong> unimos la investigación científica, el trabajo de campo directo y el análisis de políticas públicas para fortalecer a las instituciones que sirven a la sociedad.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-2">
+                        <a href="#filosofia" class="bg-amber-600 hover:bg-amber-700 text-white px-7 py-3.5 rounded-2xl font-bold shadow-md shadow-amber-600/20 hover:scale-[1.01] transition flex items-center justify-center gap-2 text-sm">
+                            <i class="fa-solid fa-compass text-amber-200"></i>
+                            <span>Conoce Nuestra Filosofía</span>
+                        </a>
+                        <a href="#contrapartes" class="bg-white hover:bg-stone-50 text-stone-700 border border-stone-300 px-7 py-3.5 rounded-2xl font-semibold shadow-sm transition flex items-center justify-center gap-2 text-sm">
+                            <i class="fa-solid fa-users text-sky-600"></i>
+                            <span>Instituciones Aliadas</span>
+                        </a>
+                    </div>
+
+                    <!-- Highlight Badges -->
+                    <div class="pt-8 border-t border-stone-200/80 grid grid-cols-2 sm:grid-cols-3 gap-4 text-xs text-stone-600 text-left">
+                        <div class="flex items-center gap-2.5">
+                            <div class="w-8 h-8 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-handshake"></i>
+                            </div>
+                            <span>Colaboración México-EEUU</span>
+                        </div>
+                        <div class="flex items-center gap-2.5">
+                            <div class="w-8 h-8 rounded-full bg-sky-100 text-sky-700 flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-comments"></i>
+                            </div>
+                            <span>Escucha activa en territorio</span>
+                        </div>
+                        <div class="flex items-center gap-2.5 col-span-2 sm:col-span-1">
+                            <div class="w-8 h-8 rounded-full bg-amber-100 text-amber-700 flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-seedling"></i>
+                            </div>
+                            <span>Evaluación y desarrollo social</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Hero Feature Card Right -->
+                <div class="lg:col-span-5">
+                    <div class="bg-white border border-stone-200 rounded-3xl p-6 sm:p-8 soft-shadow relative">
+                        <div class="flex items-center justify-between pb-5 border-b border-stone-100 mb-6">
+                            <div>
+                                <span class="text-xs font-bold uppercase tracking-wider text-amber-600">Desde Guadalajara, Jalisco</span>
+                                <h3 class="text-xl font-bold text-stone-900 mt-0.5">Nuestra Identidad</h3>
+                            </div>
+                            <span class="bg-emerald-50 text-emerald-800 text-xs font-semibold px-3 py-1 rounded-full border border-emerald-200">
+                                Fundada en 2019
+                            </span>
+                        </div>
+
+                        <!-- Core Summary Items -->
+                        <div class="space-y-4 text-xs">
+                            <div class="bg-amber-50/60 p-4 rounded-2xl border border-amber-200/60 flex items-start gap-3.5">
+                                <div class="w-10 h-10 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center shrink-0 text-base">
+                                    <i class="fa-solid fa-wheat-awn"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-stone-900 text-sm">Trabajo Agrícola Dignificado</h4>
+                                    <p class="text-stone-600 mt-0.5">Estudios pioneros sobre empleo de calidad e impulso a la formalidad de las trabajadoras y trabajadores del campo.</p>
+                                </div>
+                            </div>
+
+                            <div class="bg-sky-50/60 p-4 rounded-2xl border border-sky-200/60 flex items-start gap-3.5">
+                                <div class="w-10 h-10 rounded-xl bg-sky-100 text-sky-700 flex items-center justify-center shrink-0 text-base">
+                                    <i class="fa-solid fa-building-columns"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-stone-900 text-sm">Gestión Pública</h4>
+                                    <p class="text-stone-600 mt-0.5">Herramientas prácticas de evaluabilidad ex-ante e instrumentos de política con visión participativa.</p>
+                                </div>
+                            </div>
+
+                            <div class="bg-rose-50/60 p-4 rounded-2xl border border-rose-200/60 flex items-start gap-3.5">
+                                <div class="w-10 h-10 rounded-xl bg-rose-100 text-rose-700 flex items-center justify-center shrink-0 text-base">
+                                    <i class="fa-solid fa-icons"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-stone-900 text-sm">Cultura, Educación y Comunidad</h4>
+                                    <p class="text-stone-600 mt-0.5">Evaluaciones cualitativas para fondos artísticos nacionales, permanencia escolar y proyectos de bienestar.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-6 pt-5 border-t border-stone-100 flex items-center justify-between text-xs">
+                            <a href="https://jornamex.com/" target="_blank" rel="noopener noreferrer" class="text-emerald-700 hover:text-emerald-800 font-bold flex items-center gap-1">
+                                <span>Plataforma Jornamex</span>
+                                <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Metrics Section -->
+    <section class="py-12 bg-white border-b border-stone-200/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <div class="p-4 rounded-2xl bg-stone-50/80 border border-stone-100">
+                    <div class="text-3xl font-extrabold text-stone-900 font-display">2019</div>
+                    <div class="text-xs font-semibold text-stone-500 uppercase tracking-wider mt-1">Año de Nacimiento</div>
+                </div>
+                <div class="p-4 rounded-2xl bg-amber-50/80 border border-amber-100">
+                    <div class="text-3xl font-extrabold text-amber-700 font-display">+20</div>
+                    <div class="text-xs font-semibold text-amber-800 uppercase tracking-wider mt-1">Investigadores Aliados</div>
+                </div>
+                <div class="p-4 rounded-2xl bg-sky-50/80 border border-sky-100">
+                    <div class="text-3xl font-extrabold text-sky-700 font-display">4 Áreas</div>
+                    <div class="text-xs font-semibold text-sky-800 uppercase tracking-wider mt-1">Sectores Prioritarios</div>
+                </div>
+                <div class="p-4 rounded-2xl bg-emerald-50/80 border border-emerald-100">
+                    <div class="text-3xl font-extrabold text-emerald-700 font-display">Alcance</div>
+                    <div class="text-xs font-semibold text-emerald-800 uppercase tracking-wider mt-1">Nacional e Internacional</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Philosophy Section (Taxi - Praxis - Telos) -->
+    <section id="filosofia" class="py-20 bg-stone-900 text-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <span class="bg-amber-500/20 text-amber-300 border border-amber-500/30 text-xs font-semibold px-4 py-1.5 rounded-full uppercase tracking-widest">
+                    El alma de nuestro nombre
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight font-display">Taxi • Praxis • Telos</h2>
+                <p class="text-stone-300 text-sm sm:text-base leading-relaxed">
+                    Las tres letras de <strong class="text-white">TPT</strong> hacen referencia a conceptos griegos clásicos que guían la forma en que entendemos la realidad y nos relacionamos con las personas y las instituciones.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                
+                <!-- TAXI -->
+                <div class="warm-card bg-stone-800/90 border border-amber-500/30 rounded-3xl p-8 flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 bg-amber-500/20 text-amber-400 rounded-2xl flex items-center justify-center font-black text-2xl mb-6 border border-amber-500/30 font-display">
+                            T
+                        </div>
+                        <span class="text-xs font-mono font-bold text-amber-400 uppercase tracking-wider">Concepto I</span>
+                        <h3 class="text-2xl font-bold text-white mt-1 mb-3 font-display">TAXIS <span class="text-xs font-normal text-stone-400">(Τάξις)</span></h3>
+                        <p class="text-stone-300 text-xs leading-relaxed mb-6">
+                            Significa <strong class="text-white">medir, tasar y valorar con esmero y rigor</strong>. Es nuestro compromiso con la precisión analítica, el levantamiento cuidadoso de datos y el respeto absoluto hacia la verdad del territorio.
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-stone-700 text-xs text-amber-300 font-medium flex items-center gap-2">
+                        <i class="fa-solid fa-chart-pie"></i>
+                        <span>Medición Rigurosa & Cuidado por los Datos</span>
+                    </div>
+                </div>
+
+                <!-- PRAXIS -->
+                <div class="warm-card bg-stone-800/90 border border-emerald-500/30 rounded-3xl p-8 flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 bg-emerald-500/20 text-emerald-400 rounded-2xl flex items-center justify-center font-black text-2xl mb-6 border border-emerald-500/30 font-display">
+                            P
+                        </div>
+                        <span class="text-xs font-mono font-bold text-emerald-400 uppercase tracking-wider">Concepto II</span>
+                        <h3 class="text-2xl font-bold text-white mt-1 mb-3 font-display">PRAXIS <span class="text-xs font-normal text-stone-400">(Πρᾶξις)</span></h3>
+                        <p class="text-stone-300 text-xs leading-relaxed mb-6">
+                            Es la <strong class="text-white">acción reflexiva y el aprendizaje iterativo</strong>. Llevar la teoría a la vida real no es aplicar fórmulas abstractas, sino aprender activamente sobre la marcha y perfeccionar el oficio junto a la comunidad.
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-stone-700 text-xs text-emerald-300 font-medium flex items-center gap-2">
+                        <i class="fa-solid fa-hands-holding-child"></i>
+                        <span>Implementación & Aprendizaje Colaborativo</span>
+                    </div>
+                </div>
+
+                <!-- TELOS -->
+                <div class="warm-card bg-stone-800/90 border border-sky-500/30 rounded-3xl p-8 flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 bg-sky-500/20 text-sky-400 rounded-2xl flex items-center justify-center font-black text-2xl mb-6 border border-sky-500/30 font-display">
+                            T
+                        </div>
+                        <span class="text-xs font-mono font-bold text-sky-400 uppercase tracking-wider">Concepto III</span>
+                        <h3 class="text-2xl font-black text-white mt-1 mb-3 font-display">TELOS <span class="text-xs font-normal text-stone-400">(Τέλος)</span></h3>
+                        <p class="text-stone-300 text-xs leading-relaxed mb-6">
+                            Es la <strong class="text-white">causa final, el propósito y el sentido del cambio</strong>. Entender la raíz profunda de los problemas nos permite proponer soluciones duraderas que construyan verdadero valor público.
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-stone-700 text-xs text-sky-300 font-medium flex items-center gap-2">
+                        <i class="fa-solid fa-bullseye font-bold"></i>
+                        <span>Propósito Humano & Valor Público</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Operating Structure Box -->
+            <div class="mt-14 bg-stone-950 p-8 rounded-3xl border border-stone-800 grid lg:grid-cols-12 gap-8 items-center">
+                <div class="lg:col-span-8 space-y-2">
+                    <h4 class="text-lg font-bold text-white flex items-center gap-2 font-display">
+                        <i class="fa-solid fa-users text-amber-400"></i>
+                        Un Equipo Humano Flexible y Conectado con el País
+                    </h4>
+                    <p class="text-stone-400 text-xs sm:text-sm leading-relaxed">
+                        Con sede en <strong class="text-stone-200">Guadalajara, Jalisco</strong>, contamos con una coordinación central fija y articulamos una red de más de <strong class="text-amber-300">20 investigadores de alto nivel</strong> distribuidos estratégicamente en diversas regiones de México.
+                    </p>
+                </div>
+                <div class="lg:col-span-4 flex justify-end">
+                    <a href="https://jornamex.com/" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto bg-emerald-700 hover:bg-emerald-600 text-white font-bold px-6 py-3 rounded-xl text-xs transition flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-wheat-awn"></i>
+                        <span>Conoce el Proyecto Jornamex</span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Sectors Section -->
+    <section id="sectores" class="py-20 bg-stone-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <span class="bg-amber-100 text-amber-900 text-xs font-semibold px-4 py-1.5 rounded-full uppercase tracking-wider">
+                    Sectores Prioritarios
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-stone-900 tracking-tight font-display">Donde Generamos Impacto</h2>
+                <p class="text-stone-600 text-sm">
+                    Investigación aplicada y acompañamiento técnico en las temáticas más relevantes para el bienestar social de México.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <!-- Sector 1: Jornaleros y Trabajo Agrícola -->
+                <div class="bg-white rounded-3xl p-6 border border-stone-200/80 warm-card flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 bg-emerald-100 text-emerald-800 rounded-2xl flex items-center justify-center text-xl mb-5">
+                            <i class="fa-solid fa-wheat-awn"></i>
+                        </div>
+                        <h3 class="font-bold text-stone-900 text-base mb-2 font-display">Trabajo Agrícola Dignificado</h3>
+                        <p class="text-stone-600 text-xs leading-relaxed">
+                            Diseño de encuestas especializadas sobre la calidad del empleo agrícola, mapas de formalidad laboral y facilitación de mesas binacionales México-EEUU.
+                        </p>
+                        <div class="mt-4">
+                            <a href="https://jornamex.com/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs text-emerald-800 hover:text-emerald-900 font-bold bg-emerald-50 hover:bg-emerald-100 px-3 py-1.5 rounded-xl border border-emerald-200 transition">
+                                <span>Ver Iniciativa Jornamex</span>
+                                <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="pt-4 mt-6 border-t border-stone-100 text-[11px] font-semibold text-emerald-700">
+                        • Agricultura de Exportación y Formalización
+                    </div>
+                </div>
+
+                <!-- Sector 2: Gestión Pública -->
+                <div class="bg-white rounded-3xl p-6 border border-stone-200/80 warm-card flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 bg-sky-100 text-sky-800 rounded-2xl flex items-center justify-center text-xl mb-5">
+                            <i class="fa-solid fa-landmark"></i>
+                        </div>
+                        <h3 class="font-bold text-stone-900 text-base mb-2 font-display">Gestión Pública & Gobernanza</h3>
+                        <p class="text-stone-600 text-xs leading-relaxed">
+                            Guías prácticas de evaluabilidad ex-ante de planes gubernamentales, evaluación de programas sociales e instrumentos de política pública orientados a resultados.
+                        </p>
+                    </div>
+                    <div class="pt-4 mt-6 border-t border-stone-100 text-[11px] font-semibold text-sky-700">
+                        • Gobiernos Estatales, Federales y Municipales
+                    </div>
+                </div>
+
+                <!-- Sector 3: Gestión Cultural -->
+                <div class="bg-white rounded-3xl p-6 border border-stone-200/80 warm-card flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 bg-amber-100 text-amber-800 rounded-2xl flex items-center justify-center text-xl mb-5">
+                            <i class="fa-solid fa-palette"></i>
+                        </div>
+                        <h3 class="font-bold text-stone-900 text-base mb-2 font-display">Cultura & Expresión Artística</h3>
+                        <p class="text-stone-600 text-xs leading-relaxed">
+                            Evaluaciones de impacto cualitativo de fondos culturales (PROFEST), sistematización de programas de aprendizaje musical y fortalecimiento institucional.
+                        </p>
+                    </div>
+                    <div class="pt-4 mt-6 border-t border-stone-100 text-[11px] font-semibold text-amber-700">
+                        • Festivales, Fondos y Centros Culturales
+                    </div>
+                </div>
+
+                <!-- Sector 4: Educación y Desarrollo -->
+                <div class="bg-white rounded-3xl p-6 border border-stone-200/80 warm-card flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 bg-indigo-100 text-indigo-800 rounded-2xl flex items-center justify-center text-xl mb-5">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+                        <h3 class="font-bold text-stone-900 text-base mb-2 font-display">Educación & Desarrollo Social</h3>
+                        <p class="text-stone-600 text-xs leading-relaxed">
+                            Acompañamiento en sistemas de monitoreo para la permanencia escolar, diagnósticos regionales participativos y fortalecimiento del tejido social.
+                        </p>
+                    </div>
+                    <div class="pt-4 mt-6 border-t border-stone-100 text-[11px] font-semibold text-indigo-700">
+                        • Universidades Públicas y Privadas
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Methodologies Section -->
+    <section id="capacidades" class="py-20 bg-white border-t border-stone-200/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-5 space-y-6">
+                    <span class="bg-emerald-100 text-emerald-900 text-xs font-semibold px-4 py-1.5 rounded-full uppercase tracking-wider">
+                        Cómo Trabajamos
+                    </span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-stone-900 tracking-tight leading-tight font-display">
+                        Metodologías Cercanas y Rigurosas
+                    </h2>
+                    <p class="text-stone-600 text-sm leading-relaxed">
+                        Combinamos herramientas cuantitativas precisas con investigación cualitativa de campo y sesiones de inteligencia colectiva, garantizando que cada estudio refleje la voz de las personas.
+                    </p>
+
+                    <div class="bg-stone-50 border border-stone-200 p-5 rounded-2xl space-y-3">
+                        <h4 class="font-bold text-stone-900 text-xs uppercase tracking-wider">Pilares de Nuestro Trabajo:</h4>
+                        <div class="grid grid-cols-2 gap-2 text-xs text-stone-700">
+                            <span class="flex items-center gap-2"><i class="fa-solid fa-location-dot text-amber-600"></i> Presencia en Territorio</span>
+                            <span class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-600"></i> Rigor Científico</span>
+                            <span class="flex items-center gap-2"><i class="fa-solid fa-users text-sky-600"></i> Inteligencia Colectiva</span>
+                            <span class="flex items-center gap-2"><i class="fa-solid fa-file-lines text-indigo-600"></i> Claridad Operativa</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7">
+                    <div class="grid sm:grid-cols-2 gap-5">
+                        
+                        <div class="bg-stone-50/80 p-6 rounded-3xl border border-stone-200/80 hover:bg-amber-50/40 transition">
+                            <div class="w-10 h-10 rounded-2xl bg-amber-100 text-amber-800 flex items-center justify-center text-lg mb-4 font-bold">
+                                <i class="fa-solid fa-chart-line"></i>
+                            </div>
+                            <h4 class="font-bold text-stone-900 text-base mb-1.5 font-display">Estudios Cuantitativos</h4>
+                            <p class="text-stone-600 text-xs leading-relaxed">Diseño de encuestas representativas, modelos estadísticos y mapas territoriales con alta validez metodológica.</p>
+                        </div>
+
+                        <div class="bg-stone-50/80 p-6 rounded-3xl border border-stone-200/80 hover:bg-emerald-50/40 transition">
+                            <div class="w-10 h-10 rounded-2xl bg-emerald-100 text-emerald-800 flex items-center justify-center text-lg mb-4 font-bold">
+                                <i class="fa-solid fa-hand-holding-heart"></i>
+                            </div>
+                            <h4 class="font-bold text-stone-900 text-base mb-1.5 font-display">Etnografía & Trabajo de Campo</h4>
+                            <p class="text-stone-600 text-xs leading-relaxed">Entrevistas a profundidad, diálogo comunitario y escucha atenta coordinada por investigadoras e investigadores locales.</p>
+                        </div>
+
+                        <div class="bg-stone-50/80 p-6 rounded-3xl border border-stone-200/80 hover:bg-sky-50/40 transition">
+                            <div class="w-10 h-10 rounded-2xl bg-sky-100 text-sky-800 flex items-center justify-center text-lg mb-4 font-bold">
+                                <i class="fa-solid fa-people-group"></i>
+                            </div>
+                            <h4 class="font-bold text-stone-900 text-base mb-1.5 font-display">Talleres Participativos</h4>
+                            <p class="text-stone-600 text-xs leading-relaxed">Grupos focales, dinámicas de coincidencia participativa y mesas internacionales de diálogo entre sectores.</p>
+                        </div>
+
+                        <div class="bg-stone-50/80 p-6 rounded-3xl border border-stone-200/80 hover:bg-indigo-50/40 transition">
+                            <div class="w-10 h-10 rounded-2xl bg-indigo-100 text-indigo-800 flex items-center justify-center text-lg mb-4 font-bold">
+                                <i class="fa-solid fa-sliders"></i>
+                            </div>
+                            <h4 class="font-bold text-stone-900 text-base mb-1.5 font-display">Análisis de Evaluabilidad Ex-Ante</h4>
+                            <p class="text-stone-600 text-xs leading-relaxed">Revisión de consistencia teórica y operativa de programas sociales y leyes para maximizar su impacto real.</p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Partners Showcase Section -->
+    <section id="contrapartes" class="py-20 bg-stone-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <span class="bg-amber-500/20 text-amber-300 border border-amber-500/30 text-xs font-semibold px-4 py-1.5 rounded-full uppercase tracking-widest">
+                    Confianza Recíproca
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight font-display">Contrapartes e Instituciones Aliadas</h2>
+                <p class="text-stone-300 text-sm leading-relaxed">
+                    Hemos tenido el honor de colaborar con dependencias gubernamentales, organismos de evaluación, universidades y fundaciones internacionales.
+                </p>
+            </div>
+
+            <!-- Partners Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-5">
+                
+                <!-- Partner 1 -->
+                <div class="bg-stone-800/80 border border-stone-700/80 rounded-2xl p-6 flex flex-col items-center text-center justify-center gap-3 hover:border-amber-500/50 transition">
+                    <div class="w-12 h-12 rounded-2xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-xl font-bold border border-amber-500/20">
+                        <i class="fa-solid fa-globe"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-white text-sm">Avina Americas</h4>
+                        <span class="text-[11px] text-stone-400">Organización Multilateral</span>
+                    </div>
+                </div>
+
+                <!-- Partner 2 -->
+                <div class="bg-stone-800/80 border border-stone-700/80 rounded-2xl p-6 flex flex-col items-center text-center justify-center gap-3 hover:border-amber-500/50 transition">
+                    <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-xl font-bold border border-emerald-500/20">
+                        <i class="fa-solid fa-building-columns"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-white text-sm">CONEVAL</h4>
+                        <span class="text-[11px] text-stone-400">Evaluación de Política Social</span>
+                    </div>
+                </div>
+
+                <!-- Partner 3 -->
+                <div class="bg-stone-800/80 border border-stone-700/80 rounded-2xl p-6 flex flex-col items-center text-center justify-center gap-3 hover:border-amber-500/50 transition">
+                    <div class="w-12 h-12 rounded-2xl bg-sky-500/10 text-sky-400 flex items-center justify-center text-xl font-bold border border-sky-500/20">
+                        <i class="fa-solid fa-earth-americas"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-white text-sm">CISS</h4>
+                        <span class="text-[11px] text-stone-400">Seguridad Social Interamericana</span>
+                    </div>
+                </div>
+
+                <!-- Partner 4 -->
+                <div class="bg-stone-800/80 border border-stone-700/80 rounded-2xl p-6 flex flex-col items-center text-center justify-center gap-3 hover:border-amber-500/50 transition">
+                    <div class="w-12 h-12 rounded-2xl bg-indigo-500/10 text-indigo-400 flex items-center justify-center text-xl font-bold border border-indigo-500/20">
+                        <i class="fa-solid fa-landmark"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-white text-sm">Gobierno del Estado de Jalisco</h4>
+                        <span class="text-[11px] text-stone-400">Poder Ejecutivo Estatal</span>
+                    </div>
+                </div>
+
+                <!-- Partner 5 -->
+                <div class="bg-stone-800/80 border border-stone-700/80 rounded-2xl p-6 flex flex-col items-center text-center justify-center gap-3 hover:border-amber-500/50 transition">
+                    <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-xl font-bold border border-emerald-500/20">
+                        <i class="fa-solid fa-university"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-white text-sm">ITESO</h4>
+                        <span class="text-[11px] text-stone-400">Universidad Jesuita de Guadalajara</span>
+                    </div>
+                </div>
+
+                <!-- Partner 6 -->
+                <div class="bg-stone-800/80 border border-stone-700/80 rounded-2xl p-6 flex flex-col items-center text-center justify-center gap-3 hover:border-amber-500/50 transition">
+                    <div class="w-12 h-12 rounded-2xl bg-sky-500/10 text-sky-400 flex items-center justify-center text-xl font-bold border border-sky-500/20">
+                        <i class="fa-solid fa-flag-usa"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-white text-sm">Wilson Center</h4>
+                        <span class="text-[11px] text-stone-400">Investigación Internacional</span>
+                    </div>
+                </div>
+
+                <!-- Partner 7 -->
+                <div class="bg-stone-800/80 border border-stone-700/80 rounded-2xl p-6 flex flex-col items-center text-center justify-center gap-3 hover:border-amber-500/50 transition">
+                    <div class="w-12 h-12 rounded-2xl bg-indigo-500/10 text-indigo-400 flex items-center justify-center text-xl font-bold border border-indigo-500/20">
+                        <i class="fa-solid fa-hand-holding-heart"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-white text-sm">Walmart Foundation</h4>
+                        <span class="text-[11px] text-stone-400">Fundación Internacional</span>
+                    </div>
+                </div>
+
+                <!-- Partner 8 -->
+                <div class="bg-stone-800/80 border border-stone-700/80 rounded-2xl p-6 flex flex-col items-center text-center justify-center gap-3 hover:border-amber-500/50 transition">
+                    <div class="w-12 h-12 rounded-2xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-xl font-bold border border-amber-500/20">
+                        <i class="fa-solid fa-atom"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-white text-sm">COECYTJAL</h4>
+                        <span class="text-[11px] text-stone-400">Consejo Estatal de Ciencia y Tecnología de Jalisco</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="mt-12 bg-stone-950/80 rounded-2xl p-6 border border-stone-800 text-center max-w-3xl mx-auto">
+                <p class="text-xs text-stone-400 leading-relaxed">
+                    Nuestra trayectoria refleja un trabajo comprometido con instituciones públicas, organizaciones civiles, universidades e iniciativas filantrópicas en México y Norteamérica.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-stone-950 text-stone-400 text-xs py-12 border-t border-stone-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-8 mb-10">
+                
+                <div class="col-span-2 space-y-3">
+                    <div class="flex items-center gap-2.5">
+                        <div class="w-8 h-8 bg-amber-500 text-stone-900 rounded-lg flex items-center justify-center font-black text-sm font-display">
+                            TPT
+                        </div>
+                        <span class="text-base font-bold text-white font-display">TPT Evaluación y Proyectos S.C.</span>
+                    </div>
+                    <p class="text-stone-400 text-xs leading-relaxed max-w-sm">
+                        Consultoría científica y social enfocada en ciencias sociales, evaluación de impacto y políticas públicas. Guadalajara, Jalisco, México.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-white text-xs uppercase tracking-wider mb-3">Esencia</h4>
+                    <ul class="space-y-2 text-stone-400">
+                        <li><a href="#filosofia" class="hover:text-amber-400 transition">TAXIS (Medición)</a></li>
+                        <li><a href="#filosofia" class="hover:text-amber-400 transition">PRAXIS (Acción)</a></li>
+                        <li><a href="#filosofia" class="hover:text-amber-400 transition">TELOS (Propósito)</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-white text-xs uppercase tracking-wider mb-3">Sectores</h4>
+                    <ul class="space-y-2 text-stone-400">
+                        <li><a href="#sectores" class="hover:text-amber-400 transition">Trabajo Agrícola</a></li>
+                        <li><a href="#sectores" class="hover:text-amber-400 transition">Gestión Pública</a></li>
+                        <li><a href="#sectores" class="hover:text-amber-400 transition">Gestión Cultural</a></li>
+                        <li><a href="#sectores" class="hover:text-amber-400 transition">Educación y Comunidad</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold text-white text-xs uppercase tracking-wider mb-3">Iniciativas</h4>
+                    <ul class="space-y-2 text-stone-400">
+                        <li>
+                            <a href="https://jornamex.com/" target="_blank" rel="noopener noreferrer" class="text-emerald-400 hover:text-emerald-300 font-semibold flex items-center gap-1">
+                                <span>Proyecto Jornamex</span>
+                                <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+                            </a>
+                        </li>
+                        <li class="text-stone-500">Guadalajara, Jalisco, México</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="pt-8 border-t border-stone-900 flex flex-col sm:flex-row items-center justify-between gap-4 text-stone-500 text-[11px]">
+                <p>&copy; 2026 TPT Evaluación y Proyectos S.C. Todos los derechos reservados.</p>
+                <p>Curriculum Actualizado: Octubre de 2026</p>
+            </div>
+        </div>
